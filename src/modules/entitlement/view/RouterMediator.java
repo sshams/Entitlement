@@ -17,7 +17,8 @@ public class RouterMediator extends Mediator implements IRouter {
     @Override
     public void onRegister() {
         System.out.println("Register*******************");
-        ((Router)this.getViewComponent()).setDelegate(this);
+        //System.out.println(this.getViewComponent());
+        //((Router)this.getViewComponent()).setDelegate(this);
     }
 
     @Override
