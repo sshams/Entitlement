@@ -1,0 +1,7 @@
+<result httpResponseCode="200">
+    <entitlements>
+        {{#productIds}}
+        <productId>{{.}}</productId>
+        {{/productIds}}
+    </entitlements>
+</result>

@@ -7,6 +7,10 @@ public class ApplicationFacade extends Facade {
 
     public static final String STARTUP = "startup";
 
+    public static final String ENTITLEMENT = "entitlement";
+    public static final String ENTITLEMENT_RESULT = "entitlement/result";
+    public static final String ENTITLEMENT_FAULT = "entititlement/fault";
+
     public ApplicationFacade(String key) {
         super(key);
     }
