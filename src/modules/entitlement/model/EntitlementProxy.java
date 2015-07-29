@@ -14,14 +14,18 @@ public class EntitlementProxy extends Proxy {
 
     public static final String NAME = "EntitlementProxy";
 
+    private User user;
+    private Product product;
+
     public EntitlementProxy() {
         super(NAME, null);
+        user = new User();
+        product = new Product();
     }
 
     public EntitlementVO signInWithCredentials(HttpServletRequest request, HttpServletResponse response) throws SQLException, NamingException {
-        UserObject userObject = new UserObject();
-        if(userObject.authenticate(request.getParameter("emailAddress"), request.getParameter("password"), null)) {
-            UUID authToken = userObject.setAuthToken(request.getParameter("emailAddress"));
+        if(user.authenticate(request.getParameter("emailAddress"), request.getParameter("password"), null)) {
+            UUID authToken = user.setAuthToken(request.getParameter("emailAddress"));
             return new EntitlementVO(true, authToken);
         } else {
             return new EntitlementVO(false, null);
@@ -29,19 +33,20 @@ public class EntitlementProxy extends Proxy {
     }
 
     public EntitlementVO renewAuthToken(HttpServletRequest request, HttpServletResponse response) throws SQLException, NamingException {
-        UserObject userObject = new UserObject();
-        if(userObject.authenticate(null, null, request.getParameter("authToken"))) {
-            UUID authToken = userObject.renewAuthToken(request.getParameter("authToken"));
+        if(user.authenticate(null, null, request.getParameter("authToken"))) {
+            UUID authToken = user.renewAuthToken(request.getParameter("authToken"));
             return new EntitlementVO(true, authToken);
         } else {
             return new EntitlementVO(false, null);
         }
     }
 
-    public EntitlementVO entitlements(HttpServletRequest request, HttpServletResponse response) {
+    public EntitlementVO entitlements(HttpServletRequest request, HttpServletResponse response) throws SQLException, NamingException {
         if(request.getParameter("authToken") != null) {
-            EntitlementVO entitlementVO = new EntitlementVO(true, this.getUUID());
-            entitlementVO.productIds = this.getProductIds();
+            int id = user.getId(request.getParameter("authToken"));
+
+            EntitlementVO entitlementVO = new EntitlementVO(true, null);
+            entitlementVO.productIds = product.getProductIds(id);
             return entitlementVO;
         } else {
             EntitlementVO entitlementVO = new EntitlementVO(false, null);
@@ -49,24 +54,15 @@ public class EntitlementProxy extends Proxy {
         }
     }
 
-    public EntitlementVO verifyEntitlement(HttpServletRequest request, HttpServletResponse response) {
+    public EntitlementVO verifyEntitlement(HttpServletRequest request, HttpServletResponse response) throws SQLException, NamingException {
         if(request.getParameter("authToken") != null && request.getParameter("productId") != null) {
-            EntitlementVO entitlementVO = new EntitlementVO(true, this.getUUID());
-
-            entitlementVO.entitled = Arrays.asList(this.getProductIds()).contains(request.getParameter("productId"));
-
+            EntitlementVO entitlementVO = new EntitlementVO(true, null);
+            int id = user.getId(request.getParameter("authToken"));
+            entitlementVO.entitled = Arrays.asList(product.getProductIds(id)).contains(request.getParameter("productId"));
             return entitlementVO;
         } else {
             EntitlementVO entitlementVO = new EntitlementVO(false, null);
             return entitlementVO;
         }
-    }
-
-    public UUID getUUID() {
-        return UUID.randomUUID();
-    }
-
-    public String[] getProductIds() {
-        return new String[] {"Cheese", "Pepperoni", "Black Olives"};
     }
 }

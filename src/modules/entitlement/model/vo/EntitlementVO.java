@@ -4,10 +4,16 @@ import java.util.UUID;
 
 public class EntitlementVO {
 
-    public boolean authenticated = false;
-    public UUID authToken;
-    public String[] productIds;
-    public boolean entitled;
+    public boolean authenticated = false; //common
+
+    public UUID authToken; //SignInWithCredentials, RenewAuthToken
+
+    public String[] productIds; //Entitlements
+
+    public boolean entitled; //VerifyEntitlement
+
+    public int errorCode; //fault
+    public String errorMessage; //fault
 
     public EntitlementVO(boolean authenticated, UUID authToken) {
         this.authenticated = authenticated;

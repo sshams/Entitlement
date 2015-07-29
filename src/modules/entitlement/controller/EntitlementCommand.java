@@ -3,6 +3,7 @@ package modules.entitlement.controller;
 import common.ServiceRequest;
 import modules.entitlement.ApplicationFacade;
 import modules.entitlement.model.EntitlementProxy;
+import modules.entitlement.model.vo.EntitlementVO;
 import org.puremvc.java.multicore.interfaces.INotification;
 import org.puremvc.java.multicore.patterns.command.SimpleCommand;
 
@@ -20,7 +21,7 @@ public class EntitlementCommand extends SimpleCommand {
         EntitlementProxy entitlementProxy = (EntitlementProxy) getFacade().retrieveProxy(EntitlementProxy.NAME);
 
         try {
-            switch (serviceRequest.request.getServletPath()) {
+            switch (request.getServletPath()) {
                 case "/SignInWithCredentials":
                     serviceRequest.resultData = entitlementProxy.signInWithCredentials(request, response);
                     break;
@@ -38,7 +39,11 @@ public class EntitlementCommand extends SimpleCommand {
             getFacade().sendNotification(ApplicationFacade.ENTITLEMENT_RESULT, serviceRequest);
 
         } catch (Exception exception) {
-            getFacade().sendNotification(ApplicationFacade.ENTITLEMENT_FAULT, exception);
+            System.out.println(exception.getMessage());
+            EntitlementVO entitlementVO = new EntitlementVO(false, null);
+            entitlementVO.errorMessage = exception.getMessage();
+            serviceRequest.resultData = entitlementVO;
+            getFacade().sendNotification(ApplicationFacade.ENTITLEMENT_FAULT, serviceRequest);
         }
     }
 }

@@ -9,9 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.UUID;
 
-public class UserObject {
-
-    public static final String NAME = "UserObject";
+public class User {
 
     public boolean authenticate(String emailAddress, String password, String authToken) throws NamingException, SQLException {
         Connection connection = Entitlement.getInstance().getConnection();
@@ -69,6 +67,21 @@ public class UserObject {
         query.executeUpdate();
         connection.close();
         return uuid;
+    }
+
+    public int getId(String authToken) throws NamingException, SQLException {
+        Connection connection = Entitlement.getInstance().getConnection();
+
+        String sql = "SELECT id FROM user WHERE authToken = ?";
+        PreparedStatement query = connection.prepareStatement(sql);
+        query.setString(1, authToken);
+        ResultSet resultSet = query.executeQuery();
+        connection.close();
+        if(resultSet.next()) {
+            return resultSet.getInt("id");
+        } else {
+            return -1;
+        }
     }
 
     public UUID getUUID() {
