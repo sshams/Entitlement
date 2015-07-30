@@ -1,6 +1,7 @@
 package modules.entitlement.model;
 
 import common.connections.Entitlement;
+import org.puremvc.java.multicore.patterns.proxy.Proxy;
 
 import javax.naming.NamingException;
 import java.sql.Connection;
@@ -8,7 +9,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class Product {
+public class ProductProxy extends Proxy {
+
+    public static final String NAME = "ProductProxy";
+
+    public ProductProxy() {
+        super(NAME, null);
+    }
 
     public String[] getProductIds(int id) throws SQLException, NamingException {
         Connection connection = Entitlement.getInstance().getConnection();

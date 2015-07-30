@@ -1,6 +1,7 @@
 package modules.entitlement.model;
 
 import common.connections.Entitlement;
+import org.puremvc.java.multicore.patterns.proxy.Proxy;
 
 import javax.naming.NamingException;
 import java.sql.Connection;
@@ -9,7 +10,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.UUID;
 
-public class User {
+public class UserProxy extends Proxy {
+
+    public static final String NAME = "ProductProxy";
+
+    public UserProxy() {
+        super(NAME, null);
+    }
 
     public boolean authenticate(String emailAddress, String password, String authToken) throws NamingException, SQLException {
         Connection connection = Entitlement.getInstance().getConnection();

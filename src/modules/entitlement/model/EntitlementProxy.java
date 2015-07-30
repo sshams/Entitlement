@@ -14,18 +14,18 @@ public class EntitlementProxy extends Proxy {
 
     public static final String NAME = "EntitlementProxy";
 
-    private User user;
-    private Product product;
+    private UserProxy userProxy;
+    private ProductProxy productProxy;
 
-    public EntitlementProxy() {
+    public EntitlementProxy(ProductProxy productProxy, UserProxy userProxy) {
         super(NAME, null);
-        user = new User();
-        product = new Product();
+        this.userProxy = userProxy;
+        this.productProxy = productProxy;
     }
 
     public EntitlementVO signInWithCredentials(HttpServletRequest request, HttpServletResponse response) throws SQLException, NamingException {
-        if(user.authenticate(request.getParameter("emailAddress"), request.getParameter("password"), null)) {
-            UUID authToken = user.setAuthToken(request.getParameter("emailAddress"));
+        if(userProxy.authenticate(request.getParameter("emailAddress"), request.getParameter("password"), null)) {
+            UUID authToken = userProxy.setAuthToken(request.getParameter("emailAddress"));
             return new EntitlementVO(true, authToken);
         } else {
             return new EntitlementVO(false, null);
@@ -33,8 +33,8 @@ public class EntitlementProxy extends Proxy {
     }
 
     public EntitlementVO renewAuthToken(HttpServletRequest request, HttpServletResponse response) throws SQLException, NamingException {
-        if(user.authenticate(null, null, request.getParameter("authToken"))) {
-            UUID authToken = user.renewAuthToken(request.getParameter("authToken"));
+        if(userProxy.authenticate(null, null, request.getParameter("authToken"))) {
+            UUID authToken = userProxy.renewAuthToken(request.getParameter("authToken"));
             return new EntitlementVO(true, authToken);
         } else {
             return new EntitlementVO(false, null);
@@ -43,10 +43,10 @@ public class EntitlementProxy extends Proxy {
 
     public EntitlementVO entitlements(HttpServletRequest request, HttpServletResponse response) throws SQLException, NamingException {
         if(request.getParameter("authToken") != null) {
-            int id = user.getId(request.getParameter("authToken"));
+            int id = userProxy.getId(request.getParameter("authToken"));
 
             EntitlementVO entitlementVO = new EntitlementVO(true, null);
-            entitlementVO.productIds = product.getProductIds(id);
+            entitlementVO.productIds = productProxy.getProductIds(id);
             return entitlementVO;
         } else {
             EntitlementVO entitlementVO = new EntitlementVO(false, null);
@@ -57,8 +57,8 @@ public class EntitlementProxy extends Proxy {
     public EntitlementVO verifyEntitlement(HttpServletRequest request, HttpServletResponse response) throws SQLException, NamingException {
         if(request.getParameter("authToken") != null && request.getParameter("productId") != null) {
             EntitlementVO entitlementVO = new EntitlementVO(true, null);
-            int id = user.getId(request.getParameter("authToken"));
-            entitlementVO.entitled = Arrays.asList(product.getProductIds(id)).contains(request.getParameter("productId"));
+            int id = userProxy.getId(request.getParameter("authToken"));
+            entitlementVO.entitled = Arrays.asList(productProxy.getProductIds(id)).contains(request.getParameter("productId"));
             return entitlementVO;
         } else {
             EntitlementVO entitlementVO = new EntitlementVO(false, null);
