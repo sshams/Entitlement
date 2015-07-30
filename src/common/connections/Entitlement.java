@@ -9,7 +9,6 @@ import java.sql.SQLException;
 public class Entitlement {
 
     private static Entitlement instance;
-    private static Connection connection;
 
     private DataSource dataSource;
 

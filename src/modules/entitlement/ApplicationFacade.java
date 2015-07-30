@@ -7,6 +7,11 @@ public class ApplicationFacade extends Facade {
 
     public static final String STARTUP = "startup";
 
+    public static final String SIGN_IN_WITH_CREDENTIALS = "/SignInWithCredentials";
+    public static final String RENEW_AUTH_TOKEN = "/RenewAuthToken";
+    public static final String ENTITLEMENTS = "/entitlements";
+    public static final String VERIFY_ENTITLEMENT = "/verifyEntitlement";
+
     public static final String ENTITLEMENT = "entitlement";
     public static final String ENTITLEMENT_RESULT = "entitlement/result";
     public static final String ENTITLEMENT_FAULT = "entititlement/fault";

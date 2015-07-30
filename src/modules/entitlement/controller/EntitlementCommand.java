@@ -22,16 +22,16 @@ public class EntitlementCommand extends SimpleCommand {
 
         try {
             switch (request.getServletPath()) {
-                case "/SignInWithCredentials":
+                case ApplicationFacade.SIGN_IN_WITH_CREDENTIALS:
                     serviceRequest.result = entitlementProxy.signInWithCredentials(request, response);
                     break;
-                case "/RenewAuthToken":
+                case ApplicationFacade.RENEW_AUTH_TOKEN:
                     serviceRequest.result = entitlementProxy.renewAuthToken(request, response);
                     break;
-                case "/entitlements":
+                case ApplicationFacade.ENTITLEMENTS:
                     serviceRequest.result = entitlementProxy.entitlements(request, response);
                     break;
-                case "/verifyEntitlement":
+                case ApplicationFacade.VERIFY_ENTITLEMENT:
                     serviceRequest.result = entitlementProxy.verifyEntitlement(request, response);
                     break;
             }

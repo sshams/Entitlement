@@ -56,9 +56,14 @@ public class EntitlementProxy extends Proxy {
 
     public EntitlementVO verifyEntitlement(HttpServletRequest request, HttpServletResponse response) throws SQLException, NamingException {
         if(request.getParameter("authToken") != null && request.getParameter("productId") != null) {
-            EntitlementVO entitlementVO = new EntitlementVO(true, null);
             int id = userProxy.getId(request.getParameter("authToken"));
-            entitlementVO.entitled = Arrays.asList(productProxy.getProductIds(id)).contains(request.getParameter("productId"));
+            EntitlementVO entitlementVO;
+            if(id != -1) {
+                entitlementVO = new EntitlementVO(true, null);
+                entitlementVO.entitled = Arrays.asList(productProxy.getProductIds(id)).contains(request.getParameter("productId"));
+            } else {
+                entitlementVO = new EntitlementVO(false, null);
+            }
             return entitlementVO;
         } else {
             EntitlementVO entitlementVO = new EntitlementVO(false, null);

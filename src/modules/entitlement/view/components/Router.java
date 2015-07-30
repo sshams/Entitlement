@@ -4,6 +4,7 @@ import com.github.mustachejava.DefaultMustacheFactory;
 import com.github.mustachejava.Mustache;
 import com.github.mustachejava.MustacheFactory;
 import com.google.gson.Gson;
+import modules.entitlement.ApplicationFacade;
 import modules.entitlement.EntitlementModule;
 import modules.entitlement.model.vo.EntitlementVO;
 import modules.entitlement.view.interfaces.IRouter;
@@ -16,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet({ "/SignInWithCredentials", "/RenewAuthToken", "/entitlements", "/verifyEntitlement" })
+@WebServlet({ ApplicationFacade.SIGN_IN_WITH_CREDENTIALS, ApplicationFacade.RENEW_AUTH_TOKEN, ApplicationFacade.ENTITLEMENTS, ApplicationFacade.VERIFY_ENTITLEMENT})
 public class Router extends HttpServlet {
 
     private IRouter delegate;
