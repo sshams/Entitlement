@@ -16,9 +16,9 @@ public class StartupCommand extends SimpleCommand {
 
         ProductProxy productProxy = new ProductProxy();
         UserProxy userProxy = new UserProxy();
+
         getFacade().registerProxy(productProxy);
         getFacade().registerProxy(userProxy);
-
         getFacade().registerProxy(new EntitlementProxy(productProxy, userProxy));
         getFacade().registerMediator(new RouterMediator());
     }

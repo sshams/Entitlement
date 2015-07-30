@@ -7,7 +7,6 @@ import javax.servlet.ServletContextEvent;
 
 public class ApplicationFacade extends Facade {
 
-    public static final String NAME = "ApplicationFacade";
     public static final String STARTUP = "startup";
 
     public ApplicationFacade(String key) {
