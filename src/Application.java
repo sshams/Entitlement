@@ -1,5 +1,4 @@
-import modules.entitlement.EntitlementModule;
-import shell.Shell;
+import shell.ApplicationFacade;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -8,11 +7,11 @@ import javax.servlet.annotation.WebListener;
 @WebListener
 public class Application implements ServletContextListener {
 
+    public static final String NAME = "Application";
+
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
-        System.out.println("ContextInitialized---------------------");
-        servletContextEvent.getServletContext().setAttribute("EntitlementModule", new EntitlementModule());
-        servletContextEvent.getServletContext().setAttribute("Shell", new Shell());
+        ApplicationFacade.getInstance(NAME).startup(servletContextEvent);
     }
 
     @Override

@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6837a40e-0adc-4c23-af4c-4831f99d2e17" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Entitlement/WEB-INF/classes/modules/entitlement/model/Product.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Entitlement/WEB-INF/classes/modules/entitlement/model/User.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Entitlement/modules/entitlement/model/Product.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Entitlement/modules/entitlement/model/User.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Entitlement/WEB-INF/classes/Application.class" afterPath="$PROJECT_DIR$/out/artifacts/Entitlement/WEB-INF/classes/Application.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Entitlement/Application.class" afterPath="$PROJECT_DIR$/out/production/Entitlement/Application.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Entitlement/WEB-INF/classes/modules/entitlement/model/EntitlementProxy.class" afterPath="$PROJECT_DIR$/out/artifacts/Entitlement/WEB-INF/classes/modules/entitlement/model/EntitlementProxy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Entitlement/modules/entitlement/model/EntitlementProxy.class" afterPath="$PROJECT_DIR$/out/production/Entitlement/modules/entitlement/model/EntitlementProxy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Entitlement/WEB-INF/classes/modules/entitlement/controller/StartupCommand.class" afterPath="$PROJECT_DIR$/out/artifacts/Entitlement/WEB-INF/classes/modules/entitlement/controller/StartupCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Entitlement/modules/entitlement/controller/StartupCommand.class" afterPath="$PROJECT_DIR$/out/production/Entitlement/modules/entitlement/controller/StartupCommand.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/shell/Shell.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Application.java" afterPath="$PROJECT_DIR$/src/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Entitlement/WEB-INF/classes/modules/entitlement/view/templates/error.xml" afterPath="$PROJECT_DIR$/out/artifacts/Entitlement/WEB-INF/classes/modules/entitlement/view/templates/error.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Entitlement/modules/entitlement/view/templates/error.xml" afterPath="$PROJECT_DIR$/out/production/Entitlement/modules/entitlement/view/templates/error.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/entitlement/view/templates/error.xml" afterPath="$PROJECT_DIR$/src/modules/entitlement/view/templates/error.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/shell/ApplicationFacade.java" afterPath="$PROJECT_DIR$/src/shell/ApplicationFacade.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/entitlement/controller/EntitlementCommand.java" afterPath="$PROJECT_DIR$/src/modules/entitlement/controller/EntitlementCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/modules/entitlement/view/RouterMediator.java" afterPath="$PROJECT_DIR$/src/modules/entitlement/view/RouterMediator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/ServiceRequest.java" afterPath="$PROJECT_DIR$/src/common/ServiceRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/shell/controller/StartupCommand.java" afterPath="$PROJECT_DIR$/src/shell/controller/StartupCommand.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Entitlement.iws" />
@@ -70,8 +63,6 @@
         <option value="$PROJECT_DIR$/src/common/RouterMediator.java" />
         <option value="$PROJECT_DIR$/src/modules/entitlement/EntitlementModule.java" />
         <option value="$PROJECT_DIR$/src/shell/Shell.java" />
-        <option value="$PROJECT_DIR$/src/shell/controller/StartupCommand.java" />
-        <option value="$PROJECT_DIR$/src/shell/ApplicationFacade.java" />
         <option value="$PROJECT_DIR$/src/common/view/RouterMediator.java" />
         <option value="$PROJECT_DIR$/src/common/interfaces/IRouterAware.java" />
         <option value="$PROJECT_DIR$/src/common/PipeAwareModule.java" />
@@ -82,7 +73,6 @@
         <option value="$PROJECT_DIR$/src/modules/entitlement/view/interfaces/IRouter.java" />
         <option value="$PROJECT_DIR$/src/modules/entitlement/view/templates/success.xml" />
         <option value="$PROJECT_DIR$/src/modules/entitlement/model/User.java" />
-        <option value="$PROJECT_DIR$/src/common/ServiceRequest.java" />
         <option value="$PROJECT_DIR$/src/modules/entitlement/model/Product.java" />
         <option value="$PROJECT_DIR$/src/modules/entitlement/model/vo/EntitlementVO.java" />
         <option value="$PROJECT_DIR$/src/modules/entitlement/view/RouterMediator.java" />
@@ -91,10 +81,13 @@
         <option value="$PROJECT_DIR$/src/modules/entitlement/model/UserProxy.java" />
         <option value="$PROJECT_DIR$/src/modules/entitlement/model/ProductProxy.java" />
         <option value="$PROJECT_DIR$/src/modules/entitlement/controller/StartupCommand.java" />
-        <option value="$PROJECT_DIR$/src/modules/entitlement/model/EntitlementProxy.java" />
         <option value="$PROJECT_DIR$/src/modules/entitlement/view/templates/error.xml" />
-        <option value="$PROJECT_DIR$/src/Application.java" />
         <option value="$PROJECT_DIR$/src/common/connections/Entitlement.java" />
+        <option value="$PROJECT_DIR$/src/shell/ApplicationFacade.java" />
+        <option value="$PROJECT_DIR$/src/modules/entitlement/model/EntitlementProxy.java" />
+        <option value="$PROJECT_DIR$/src/shell/controller/StartupCommand.java" />
+        <option value="$PROJECT_DIR$/src/Application.java" />
+        <option value="$PROJECT_DIR$/src/common/ServiceRequest.java" />
       </list>
     </option>
   </component>
@@ -120,7 +113,7 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="431" />
+    <option name="x" value="437" />
     <option name="y" value="23" />
     <option name="width" value="1687" />
     <option name="height" value="1330" />
@@ -214,7 +207,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="entitlement" />
+              <option name="myItemId" value="shell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entitlement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entitlement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shell" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -233,58 +248,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="entitlement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entitlement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entitlement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entitlement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entitlement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entitlement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entitlement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -303,28 +266,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entitlement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entitlement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="connections" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -716,15 +657,15 @@
       <updated>1438026888871</updated>
       <workItem from="1438026894788" duration="45372000" />
       <workItem from="1438199578304" duration="6771000" />
-      <workItem from="1438206983958" duration="1509000" />
+      <workItem from="1438206983958" duration="5324000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53652000" />
+    <option name="totallyTimeSpent" value="57467000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="431" y="23" width="1687" height="1330" extended-state="0" />
+    <frame x="437" y="23" width="1687" height="1330" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -732,6 +673,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -746,11 +688,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1997629" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37668517" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37668517" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
@@ -782,9 +723,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6209#6210#0" expanded="true" />
-            <element signature="e#6249#6250#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#6209#6210#0" expanded="false" />
+            <element signature="e#6249#6250#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -869,50 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/ServiceRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/shell/Shell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13654096">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding>
-            <element signature="e#105#106#0" expanded="false" />
-            <element signature="e#166#167#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/shell/controller/StartupCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15604681">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/shell/ApplicationFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46814045">
-          <caret line="28" column="32" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modules/entitlement/ApplicationFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="47" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="47" />
-          <folding>
-            <element signature="e#950#951#0" expanded="true" />
-            <element signature="e#991#992#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/modules/entitlement/view/RouterMediator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6293888">
@@ -937,14 +834,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/modules/entitlement/controller/StartupCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15815085">
-          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/modules/entitlement/controller/EntitlementCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1459854">
@@ -953,46 +842,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/modules/entitlement/model/UserProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2676399">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1438271360000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
-            <marker date="1438271360000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
-            <marker date="1438271360000" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
-            <marker date="1438271360000" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
-            <marker date="1438271360000" expanded="true" signature="-1:-1" placeholder="SELECT id FR..user..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modules/entitlement/model/ProductProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19464721">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#447#448#0" expanded="true" />
-            <marker date="1438271364000" expanded="true" signature="-1:-1" placeholder="SELECT produ..product..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/modules/entitlement/view/templates/error.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.039011702">
           <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/modules/entitlement/model/EntitlementProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2176781">
-          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -1005,28 +858,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/PipeAwareModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59366757">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-            <element signature="e#1149#1150#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3364116">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/modules/entitlement/model/vo/EntitlementVO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15831135">
@@ -1035,10 +866,117 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/PipeAwareModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17810026">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1071#1072#0" expanded="true" />
+            <element signature="e#1149#1150#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/modules/entitlement/view/components/Router.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41556728">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.59366757">
+          <caret line="37" column="90" selection-start-line="37" selection-start-column="73" selection-end-line="37" selection-end-column="90" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modules/entitlement/controller/StartupCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18248175">
+          <caret line="21" column="78" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modules/entitlement/ApplicationFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2189781">
+          <caret line="20" column="53" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modules/entitlement/model/EntitlementProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13381995">
+          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modules/entitlement/model/UserProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29440388">
+          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#464#465#0" expanded="true" />
+            <marker date="1438271360000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1438271360000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+            <marker date="1438271360000" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
+            <marker date="1438271360000" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
+            <marker date="1438271360000" expanded="true" signature="-1:-1" placeholder="SELECT id FR..user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/ServiceRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1216545">
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modules/entitlement/model/ProductProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42579076">
+          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#414#415#0" expanded="true" />
+            <element signature="e#447#448#0" expanded="true" />
+            <marker date="1438271364000" expanded="true" signature="-1:-1" placeholder="SELECT produ..product..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shell/controller/StartupCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13381995">
+          <caret line="15" column="83" selection-start-line="15" selection-start-column="83" selection-end-line="15" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shell/ApplicationFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30413625">
+          <caret line="30" column="53" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="53" />
+          <folding>
+            <element signature="e#854#855#0" expanded="true" />
+            <element signature="e#916#917#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15815085">
+          <caret line="13" column="73" selection-start-line="13" selection-start-column="73" selection-end-line="13" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

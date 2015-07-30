@@ -23,16 +23,16 @@ public class EntitlementCommand extends SimpleCommand {
         try {
             switch (request.getServletPath()) {
                 case "/SignInWithCredentials":
-                    serviceRequest.resultData = entitlementProxy.signInWithCredentials(request, response);
+                    serviceRequest.result = entitlementProxy.signInWithCredentials(request, response);
                     break;
                 case "/RenewAuthToken":
-                    serviceRequest.resultData = entitlementProxy.renewAuthToken(request, response);
+                    serviceRequest.result = entitlementProxy.renewAuthToken(request, response);
                     break;
                 case "/entitlements":
-                    serviceRequest.resultData = entitlementProxy.entitlements(request, response);
+                    serviceRequest.result = entitlementProxy.entitlements(request, response);
                     break;
                 case "/verifyEntitlement":
-                    serviceRequest.resultData = entitlementProxy.verifyEntitlement(request, response);
+                    serviceRequest.result = entitlementProxy.verifyEntitlement(request, response);
                     break;
             }
 
@@ -42,7 +42,7 @@ public class EntitlementCommand extends SimpleCommand {
             System.out.println(exception.getMessage());
             EntitlementVO entitlementVO = new EntitlementVO(false, null);
             entitlementVO.errorMessage = exception.getMessage();
-            serviceRequest.resultData = entitlementVO;
+            serviceRequest.result = entitlementVO;
             getFacade().sendNotification(ApplicationFacade.ENTITLEMENT_FAULT, serviceRequest);
         }
     }

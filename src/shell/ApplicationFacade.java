@@ -3,6 +3,8 @@ package shell;
 import org.puremvc.java.multicore.patterns.facade.Facade;
 import shell.controller.StartupCommand;
 
+import javax.servlet.ServletContextEvent;
+
 public class ApplicationFacade extends Facade {
 
     public static final String NAME = "ApplicationFacade";
@@ -25,7 +27,7 @@ public class ApplicationFacade extends Facade {
         return (ApplicationFacade) instanceMap.get(key);
     }
 
-    public void startup() {
-        sendNotification(STARTUP);
+    public void startup(ServletContextEvent servletContextEvent) {
+        sendNotification(STARTUP, servletContextEvent);
     }
 }
