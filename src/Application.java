@@ -11,8 +11,8 @@ public class Application implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         System.out.println("ContextInitialized---------------------");
-        servletContextEvent.getServletContext().setAttribute("Shell", new Shell());
         servletContextEvent.getServletContext().setAttribute("EntitlementModule", new EntitlementModule());
+        servletContextEvent.getServletContext().setAttribute("Shell", new Shell());
     }
 
     @Override

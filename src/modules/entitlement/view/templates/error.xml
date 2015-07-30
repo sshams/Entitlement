@@ -1,2 +1,3 @@
-<result httpResponseCode="401" errorCode="{{errorCode}}" errorMessage="{{errorMessage}}">
+<result httpResponseCode="401" errorCode="{{errorCode}}">
+    <message>{{errorMessage}}</message>
 </result>
