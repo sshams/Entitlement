@@ -1,5 +1,6 @@
 package modules.entitlement.controller;
 
+import common.Routes;
 import common.ServiceRequest;
 import modules.entitlement.ApplicationFacade;
 import modules.entitlement.model.EntitlementProxy;
@@ -22,16 +23,16 @@ public class EntitlementCommand extends SimpleCommand {
 
         try {
             switch (request.getServletPath()) {
-                case ApplicationFacade.SIGN_IN_WITH_CREDENTIALS:
+                case Routes.SIGN_IN_WITH_CREDENTIALS:
                     serviceRequest.result = entitlementProxy.signInWithCredentials(request, response);
                     break;
-                case ApplicationFacade.RENEW_AUTH_TOKEN:
+                case Routes.RENEW_AUTH_TOKEN:
                     serviceRequest.result = entitlementProxy.renewAuthToken(request, response);
                     break;
-                case ApplicationFacade.ENTITLEMENTS:
+                case Routes.ENTITLEMENTS:
                     serviceRequest.result = entitlementProxy.entitlements(request, response);
                     break;
-                case ApplicationFacade.VERIFY_ENTITLEMENT:
+                case Routes.VERIFY_ENTITLEMENT:
                     serviceRequest.result = entitlementProxy.verifyEntitlement(request, response);
                     break;
             }

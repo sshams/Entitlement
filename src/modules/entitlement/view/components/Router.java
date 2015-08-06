@@ -4,7 +4,7 @@ import com.github.mustachejava.DefaultMustacheFactory;
 import com.github.mustachejava.Mustache;
 import com.github.mustachejava.MustacheFactory;
 import com.google.gson.Gson;
-import modules.entitlement.ApplicationFacade;
+import common.Routes;
 import modules.entitlement.EntitlementModule;
 import modules.entitlement.model.vo.EntitlementVO;
 import modules.entitlement.view.interfaces.IRouter;
@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet({ ApplicationFacade.SIGN_IN_WITH_CREDENTIALS, ApplicationFacade.RENEW_AUTH_TOKEN, ApplicationFacade.ENTITLEMENTS, ApplicationFacade.VERIFY_ENTITLEMENT})
+@WebServlet({ Routes.SIGN_IN_WITH_CREDENTIALS, Routes.RENEW_AUTH_TOKEN, Routes.ENTITLEMENTS, Routes.VERIFY_ENTITLEMENT})
 public class Router extends HttpServlet {
 
     private IRouter delegate;
@@ -47,16 +47,16 @@ public class Router extends HttpServlet {
 
     public void result(HttpServletRequest request, HttpServletResponse response, EntitlementVO entitlementVO) {
         switch (request.getServletPath()) {
-            case "/SignInWithCredentials":
+            case Routes.SIGN_IN_WITH_CREDENTIALS:
                 this.signInWithCredentials(request, response, (EntitlementVO) entitlementVO);
                 break;
-            case "/RenewAuthToken":
+            case Routes.RENEW_AUTH_TOKEN:
                 this.renewAuthToken(request, response, (EntitlementVO) entitlementVO);
                 break;
-            case "/entitlements":
+            case Routes.ENTITLEMENTS:
                 this.entitlements(request, response, (EntitlementVO) entitlementVO);
                 break;
-            case "/verifyEntitlement":
+            case Routes.VERIFY_ENTITLEMENT:
                 this.verifyEntitlement(request, response, (EntitlementVO) entitlementVO);
                 break;
         }
