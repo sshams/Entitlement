@@ -5,4 +5,5 @@ public class Routes {
     public static final String RENEW_AUTH_TOKEN = "/RenewAuthToken";
     public static final String ENTITLEMENTS = "/entitlements";
     public static final String VERIFY_ENTITLEMENT = "/verifyEntitlement";
+    public static final String PROFILE = "/profile";
 }

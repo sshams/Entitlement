@@ -4,6 +4,7 @@ import modules.entitlement.ApplicationFacade;
 import modules.entitlement.model.EntitlementProxy;
 import modules.entitlement.model.ProductProxy;
 import modules.entitlement.model.UserProxy;
+import modules.entitlement.view.EntitlementJunctionMediator;
 import modules.entitlement.view.RouterMediator;
 import org.puremvc.java.multicore.interfaces.INotification;
 import org.puremvc.java.multicore.patterns.command.SimpleCommand;
@@ -20,6 +21,8 @@ public class StartupCommand extends SimpleCommand {
         getFacade().registerProxy(productProxy);
         getFacade().registerProxy(userProxy);
         getFacade().registerProxy(new EntitlementProxy(productProxy, userProxy));
+
+        getFacade().registerMediator(new EntitlementJunctionMediator());
         getFacade().registerMediator(new RouterMediator());
     }
 }

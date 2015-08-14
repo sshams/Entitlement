@@ -1,5 +1,6 @@
 package modules.entitlement;
 
+import modules.entitlement.controller.AuthenticateCommand;
 import modules.entitlement.controller.StartupCommand;
 import org.puremvc.java.multicore.patterns.facade.Facade;
 
@@ -11,6 +12,10 @@ public class ApplicationFacade extends Facade {
     public static final String ENTITLEMENT_RESULT = "entitlement/result";
     public static final String ENTITLEMENT_FAULT = "entititlement/fault";
 
+    public static final String AUTHENTICATE = "entitlement/authenticate";
+    public static final String AUTHENTICATE_RESULT = "entitlement/authenticate/result";
+    public static final String AUTHENTICATE_FAULT = "entitlement/authenticate/fault";
+
     public ApplicationFacade(String key) {
         super(key);
     }
@@ -19,6 +24,7 @@ public class ApplicationFacade extends Facade {
     protected void initializeController() {
         super.initializeController();
         registerCommand(STARTUP, new StartupCommand());
+        registerCommand(AUTHENTICATE, new AuthenticateCommand());
     }
 
     public static ApplicationFacade getInstance(String key) {

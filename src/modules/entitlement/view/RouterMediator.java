@@ -3,6 +3,7 @@ package modules.entitlement.view;
 import common.PipeAwareModule;
 import common.ServiceRequest;
 import modules.entitlement.ApplicationFacade;
+import modules.entitlement.model.vo.EntitlementVO;
 import modules.entitlement.view.components.Router;
 import modules.entitlement.view.interfaces.IRouter;
 import org.puremvc.java.multicore.interfaces.INotification;
@@ -47,11 +48,11 @@ public class RouterMediator extends Mediator implements IRouter {
                 break;
             case ApplicationFacade.ENTITLEMENT_RESULT:
                 serviceRequest = (ServiceRequest) notification.getBody();
-                ((Router) this.getViewComponent()).result(serviceRequest.request, serviceRequest.response, serviceRequest.result);
+                ((Router) this.getViewComponent()).result(serviceRequest.request, serviceRequest.response, (EntitlementVO) serviceRequest.result);
                 break;
             case ApplicationFacade.ENTITLEMENT_FAULT:
                 serviceRequest = (ServiceRequest) notification.getBody();
-                ((Router) this.getViewComponent()).fault(serviceRequest.request, serviceRequest.response, serviceRequest.result);
+                ((Router) this.getViewComponent()).fault(serviceRequest.request, serviceRequest.response, (EntitlementVO) serviceRequest.result);
                 break;
         }
     }

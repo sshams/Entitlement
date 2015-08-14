@@ -9,7 +9,7 @@ public class ServiceRequest {
 
     public HttpServletRequest request;
     public HttpServletResponse response;
-    public EntitlementVO result;
+    public Object result;
 
     public ServiceRequest(HttpServletRequest request, HttpServletResponse response) {
         this.request = request;
